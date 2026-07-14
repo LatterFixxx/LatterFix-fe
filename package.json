@@ -18,7 +18,7 @@
     "@hello-pangea/dnd": "^18.0.1",
     "@sentry/react": "^10.39.0",
     "@stellar/design-system": "^3.2.5",
-    "@stellar/stellar-sdk": "^14.3.3",
+    "@stellar/stellar-sdk": "^16.0.1",
     "@stellar/stellar-xdr-json": "^23.0.0",
     "@tailwindcss/vite": "^4.2.0",
     "@tanstack/react-query": "^5.90.21",
