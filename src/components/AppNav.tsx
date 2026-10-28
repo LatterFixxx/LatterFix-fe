@@ -15,6 +15,7 @@ import {
   Zap,
   ExternalLink,
   UserCircle2,
+  ArrowLeftRight,
 } from 'lucide-react';
 import { useTaskStore } from '../services/taskStore';
 import { useWallet } from '../hooks/useWallet';
@@ -137,6 +138,21 @@ const AppNav: React.FC = () => {
       >
         <History className="w-4 h-4" />
         <span>History</span>
+      </NavLink>
+
+      <NavLink
+        to="/cross-asset-payment"
+        className={({ isActive }) =>
+          `flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[13px] font-semibold transition ${
+            isActive
+              ? 'text-(--accent) bg-white/5'
+              : 'text-(--muted) hover:bg-white/10 hover:text-white'
+          }`
+        }
+        onClick={() => setMobileOpen(false)}
+      >
+        <ArrowLeftRight className="w-4 h-4" />
+        <span>Cross-Asset</span>
       </NavLink>
 
       <NavLink
