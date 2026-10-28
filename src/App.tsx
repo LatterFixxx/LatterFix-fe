@@ -14,6 +14,7 @@ import ErrorBoundary from './components/ErrorBoundary';
 import ErrorFallback from './components/ErrorFallback';
 import Login from './pages/Login';
 import AuthCallback from './pages/AuthCallback';
+import CrossAssetPayment from './pages/CrossAssetPayment';
 import { contractService } from './services/contracts';
 
 function App() {
@@ -93,6 +94,14 @@ function App() {
         />
         <Route path="/login" element={<Login />} />
         <Route path="/auth-callback" element={<AuthCallback />} />
+        <Route
+          path="/cross-asset-payment"
+          element={
+            <ErrorBoundary fallback={<ErrorFallback title="Cross-Asset Payment Error" />}>
+              <CrossAssetPayment />
+            </ErrorBoundary>
+          }
+        />
         <Route
           path="/profile"
           element={
